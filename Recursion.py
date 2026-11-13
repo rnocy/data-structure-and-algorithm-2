@@ -42,13 +42,15 @@ def requirement(instructions: list[str]) -> list[int]: #define main requirements
         else:  # green
             next_index = i + 1
 
-        # record this index, then continue from the next one
-        return [i] + get_index(next_index)
+        return [i] + get_index(next_index) #continue to the next one
 
     return get_index(0) #set the starting element
 
-def main(): #define the main algorithm
+def main(): #define the main function for the algorithm
     print("Let's solve some example") #print this for user interface
     instructions =  get_user_list() #get user list as instruction input
     print("Your list:", instructions)
     print("Visited indices:", requirement(instructions))
+
+if __name__ == "__main__": #run main
+    main()
